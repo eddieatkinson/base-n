@@ -18,10 +18,10 @@ for(let i = 0; i < base; i++){
 	digitsForBase.push(i);
 }
 var exp = 0;
-// var expCounter = 1;
+var expCounter = 1; // How many spaces out the exponent is, e.g., 2^2 is 3 spots out, 2^0 is one spot.
 var numLeft = baseTenNumber;
-var numTimes;
-while(numLeft > 0){
+var numTimes; // Once we find the greatest exponent, how many times the powered number goes into the baseTenNumber
+while(expCounter > 0){
 	while(numOK){
 		if(Math.pow(base, exp) > numLeft){
 			exp--;
